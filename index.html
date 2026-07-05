@@ -3,19 +3,21 @@
 
 <head>
   <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110381699', 'ym');
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=110381699', 'ym');
 
-    ym(110381699, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/110381699" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-  
+    ym(110381699, 'init', { ssr: true, webvisor: true, trackHash: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/110381699" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N27K8HSLBS"></script>
   <script>
@@ -38,8 +40,10 @@
   <meta property="og:description"
     content="Создание лендингов, корпоративных сайтов. Сайт под ключ. Настройка SSL, домены.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://andreybeloborodov.github.io/images/icon_zastavka.jpg">
   <meta property="og:url" content="https://andreybeloborodov.github.io/">
   <meta property="og:site_name" content="Белобородов Андрей — Веб-разработчик">
+  <link rel="icon" href="images/icon_zastavka.jpg" type="image/x-icon">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Заказать сайт | Белобородов Андрей">
   <meta name="twitter:description" content="Создание лендингов, корпоративных сайтов. Сайт под ключ.">
@@ -1032,6 +1036,86 @@
       font-size: 1.4rem;
     }
 
+    .calc-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .calc-box {
+      max-width: none;
+    }
+
+    .consult-box {
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .consult-box h3 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .consult-box p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      font-size: .92rem;
+    }
+
+    .consult-row {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .consult-row label {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .consult-row input {
+      background: var(--dark-bg);
+      color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: .85rem 1rem;
+      font-family: var(--font);
+      font-size: .9rem;
+      transition: .2s;
+    }
+
+    .consult-row input:focus {
+      outline: none;
+      border-color: var(--cyan);
+    }
+
+    .consult-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .consult-note {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: .8rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+
+      .calc-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
     /* ── SELECT FIX (dark dropdown) ── */
     .calc-row select {
       background: var(--dark-bg);
@@ -1058,6 +1142,8 @@
       font-family: var(--font);
       font-size: 0.9rem;
     }
+
+    
   </style>
 </head>
 
@@ -1098,7 +1184,7 @@
           Обсудим цели - подберу технические решения.
         </p>
         <div class="hero-actions animate d4">
-          <a class="btn-primary" id="connectId">Связаться
+          <a class="btn-primary" id="connectId" href="https://vk.ru/andreyk_a">Связаться
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
@@ -1116,77 +1202,12 @@
           <span class="terminal-title">about.json</span>
         </div>
         <div class="terminal-line t-comment">// Белобородов Андрей</div>
-        <div class="terminal-line"><span class="t-key">"role"</span>: <span class="t-str">"WEB Dev"</span>,</div>
-        <div class="terminal-line"><span class="t-key">"location"</span>: <span class="t-str">"Россия / Remote"</span>,
+        <div class="terminal-line"><span class="t-key">"Должность"</span>: <span class="t-str">"WEB Разработчик"</span>,</div>
+        <div class="terminal-line"><span class="t-key">"Местоположение"</span>: <span class="t-str">"Россия / Удалённо"</span>,
         </div>
-        <div class="terminal-line"><span class="t-key">"experience"</span>: <span class="t-num">5+</span>,</div>
-        <div class="terminal-line"><span class="t-key">"stack"</span>: [<span class="t-str">"HTML"</span>, <span
-            class="t-str">"CSS"</span>, <span class="t-str">"JS"</span>],</div>
-        <div class="terminal-line"><span class="t-key">"ai_tools"</span>: <span class="t-bool">true</span>,</div>
-        <div class="terminal-line"><span class="t-key">"available"</span>: <span class="t-bool">true</span></div>
-      </div>
-    </section>
-
-    <section class="features container">
-      <div class="section-label animate d1">Почему со мной</div>
-      <h2 class="section-title animate d2">Скорость. Надёжность. Полный цикл.</h2>
-      <div class="features-grid">
-        <article class="feature-card animate d2">
-          <span class="feature-num">01</span>
-          <h3>Превращаю трафик в доход</h3>
-          <p>Создаю лендинги, где каждый пиксель работает на конверсию.</p>
-        </article>
-        <article class="feature-card animate d3">
-          <span class="feature-num">02</span>
-          <h3>Использую нейросети</h3>
-          <p>Ваш бюджет не раздувается, качество не падает.</p>
-        </article>
-        <article class="feature-card animate d4">
-          <span class="feature-num">03</span>
-          <h3>Не только фронтенд</h3>
-          <p> Настраиваю SEO, домены, SSL, почту и мессенджеры. Сайт работает стабильно с первого дня.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="calculator container" id="calculator">
-      <div class="section-label animate d1">Калькулятор</div>
-      <h2 class="section-title animate d2">Рассчитайте стоимость сайта</h2>
-
-      <div class="calc-box animate d3">
-
-        <div class="calc-row">
-          <label>Тип сайта</label>
-          <select id="siteType">
-            <option value="1">Сайт-визитка</option>
-            <option value="1.5">Лендинг</option>
-            <option value="2">Корпоративный сайт</option>
-          </select>
-        </div>
-
-        <div class="calc-row">
-          <label>Уровень дизайна</label>
-          <select id="design">
-            <option value="1">Простой</option>
-            <option value="1.4">Современный</option>
-            <option value="1.8">Уникальный</option>
-          </select>
-        </div>
-
-        <div class="calc-row">
-          <label>Наполнение</label>
-          <select id="content">
-            <option value="1">Вы даёте тексты</option>
-            <option value="1.2">Помогаю с текстами</option>
-            <option value="1.5">Полное наполнение под ключ</option>
-          </select>
-        </div>
-
-        <div class="calc-result">
-          <span>Примерная стоимость:</span>
-          <strong><span id="price">0</span>₽</strong>
-        </div>
-
+        <div class="terminal-line"><span class="t-key">"Опыт работы"</span>: <span class="t-num">5+</span>,</div>
+        <div class="terminal-line"><span class="t-key">"Технологии"</span>: [<span class="t-str">"HTML"</span>, <span
+            class="t-str">"CSS"</span>, <span class="t-str">"JS"</span>, <span class="t-str">"AI"</span>],</div>
       </div>
     </section>
 
@@ -1239,16 +1260,99 @@
 
       </div>
     </section>
+
+    <section class="features container">
+      <div class="section-label animate d1">Почему со мной</div>
+      <h2 class="section-title animate d2">Скорость. Надёжность. Полный цикл.</h2>
+      <div class="features-grid">
+        <article class="feature-card animate d2">
+          <span class="feature-num">01</span>
+          <h3>Превращаю трафик в доход</h3>
+          <p>Создаю лендинги, где каждый пиксель работает на конверсию.</p>
+        </article>
+        <article class="feature-card animate d3">
+          <span class="feature-num">02</span>
+          <h3>Использую нейросети</h3>
+          <p>Ваш бюджет не раздувается, качество не падает.</p>
+        </article>
+        <article class="feature-card animate d4">
+          <span class="feature-num">03</span>
+          <h3>Не только фронтенд</h3>
+          <p> Настраиваю SEO, домены, SSL, почту и мессенджеры. Сайт работает стабильно с первого дня.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="calculator container" id="calculator">
+      <div class="section-label animate d1">Калькулятор</div>
+      <h2 class="section-title animate d2">Рассчитайте стоимость сайта</h2>
+
+      <div class="calc-wrapper">
+
+        <div class="calc-box animate d3">
+
+          <div class="calc-row">
+            <label>Тип сайта</label>
+            <select id="siteType">
+              <option value="1">Сайт-визитка</option>
+              <option value="1.5">Лендинг</option>
+              <option value="2">Корпоративный сайт</option>
+            </select>
+          </div>
+
+          <div class="calc-row">
+            <label>Уровень дизайна</label>
+            <select id="design">
+              <option value="1">Простой</option>
+              <option value="1.4">Современный</option>
+              <option value="1.8">Уникальный</option>
+            </select>
+          </div>
+
+          <div class="calc-row">
+            <label>Наполнение</label>
+            <select id="content">
+              <option value="1">Вы даёте тексты</option>
+              <option value="1.2">Помогаю с текстами</option>
+              <option value="1.5">Полное наполнение под ключ</option>
+            </select>
+          </div>
+
+          <div class="calc-result">
+            <span>Примерная стоимость:</span>
+            <strong><span id="price">0</span>₽</strong>
+          </div>
+
+        </div>
+
+        <aside class="consult-box animate d4">
+
+          <h3>Бесплатная консультация</h3>
+
+          <p>
+            Отвечу на вопросы, обсудим задачи и сориентирую по стоимости
+          </p>
+
+          <div class="consult-row">
+            <input type="tel" placeholder="+7 (___) ___-__-__" id="consultPhone">
+          </div>
+
+          <button class="btn-primary consult-btn">
+            Получить консультацию
+          </button>
+
+        </aside>
+
+      </div>
+    </section>
+
+
+
   </main>
 
   <footer>
     <div class="container footer-inner">
       <span class="footer-copy">© 2026 Белобородов Андрей. Все права защищены.</span>
-      <nav class="footer-links">
-        <a href="https://t.me/mojytel" target="_blank" rel="noopener">Telegram</a>
-        <a href="mailto:andreybelo73.30@gmail.com">Email</a>
-        <a href="tel:+7-920-308-35-51">+7-920-308-35-51</a>
-      </nav>
     </div>
   </footer>
   <script>
@@ -1317,6 +1421,60 @@
     );
 
     calcPrice();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    emailjs.init("oPKwQoC-vJlOw3Bc7");
+  </script>
+
+  <script>
+    document.querySelector(".consult-btn").addEventListener("click", () => {
+      const phone = document.getElementById("consultPhone").value;
+
+      if (!phone) {
+        alert("Введите телефон");
+        return;
+      }
+
+      emailjs.send("service_pj9kw3m", "template_yznf4sp", {
+        phone: phone
+      })
+        .then(() => {
+          alert("Заявка отправлена!");
+          document.getElementById("consultPhone").value = "";
+        })
+        .catch((error) => {
+          console.log(error);
+          alert("Ошибка отправки");
+        });
+    });
+
+    const phone = document.getElementById("consultPhone");
+
+phone.addEventListener("input", (e) => {
+    let digits = e.target.value.replace(/\D/g, "").slice(0, 11);
+
+    // 👉 если пользователь начал ввод — заменяем первую цифру на 7 (для внутренней логики)
+    if (digits.length > 0) {
+        digits = "7" + digits.slice(1);
+    }
+
+    let result = "";
+
+    for (let i = 0; i < digits.length; i++) {
+        result += digits[i];
+
+        if (i === 0 || i === 3 || i === 6 || i == 8) {
+            result += " ";
+        }
+    }
+
+    // 👉 показываем +7 вместо первой цифры
+    e.target.value = result.trim().replace(/^7/, "+7");
+});
+    
   </script>
 
 </body>
