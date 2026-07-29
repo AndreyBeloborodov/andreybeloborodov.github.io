@@ -191,7 +191,8 @@ header{
 
 .product img{
     display:block;
-    height: 30vh;
+    height: 35vw;
+    min-height: 400px;
 }
 
 .info{
