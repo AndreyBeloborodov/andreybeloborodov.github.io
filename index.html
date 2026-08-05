@@ -69,6 +69,77 @@
 
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const slider = document.querySelector('.div-products');
+    const products = document.querySelectorAll('.product');
+
+    const prevButton = document.querySelector('.slider-arrow.prev');
+    const nextButton = document.querySelector('.slider-arrow.next');
+
+    if (!slider || products.length === 0) {
+        return;
+    }
+
+    let currentSlide = 0;
+
+    function updateSlider() {
+
+        if (window.innerWidth <= 700) {
+
+            slider.style.transform =
+                `translateX(-${currentSlide * 100}%)`;
+
+            prevButton.style.display =
+                currentSlide === 0 ? 'none' : 'block';
+
+            nextButton.style.display =
+                currentSlide === products.length - 1 ? 'none' : 'block';
+
+        } else {
+
+            slider.style.transform = '';
+
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+
+        }
+    }
+
+
+    nextButton.addEventListener('click', () => {
+
+        if (currentSlide < products.length - 1) {
+
+            currentSlide++;
+
+            updateSlider();
+        }
+
+    });
+
+
+    prevButton.addEventListener('click', () => {
+
+        if (currentSlide > 0) {
+
+            currentSlide--;
+
+            updateSlider();
+        }
+
+    });
+
+
+    window.addEventListener('resize', updateSlider);
+
+    updateSlider();
+
+});
+</script>
+    
 <body>
 
 <header>
@@ -140,48 +211,92 @@
 <section class="preview">
 
     <h2>Что публикуется в канале</h2>  
+
+    <div class="products-slider">
     
-    <div class="div-products">
-
-        <div class="product">
-
-            <img src="IMG_20260727_163915_438.jpg">
-
-            <div class="info">
-
-                <span class="rating">
-                    ⭐ 4.9 · 5000+ заказов
-                </span>            
-
-                <h3>
-                 Летнее платье свободного кроя
-                </h3>
-            
-                <div class="price">Заказать на AliExpress</div>        
-
+        <div class="div-products">
+    
+            <div class="product">
+    
+                <img src="images/product_1.jpg">
+    
+                <div class="info">
+    
+                    <span class="rating">
+                        ⭐ 4.7 · 4000+ заказов
+                    </span>
+    
+                    <h3>
+                        Хлопковое платье с открытой спиной
+                    </h3>
+    
+                    <a href="https://t.me/nahodki_s_ali/635" class="txt-link">
+                        Посмотреть в Telegram
+                    </a>
+    
+                </div>
+    
             </div>
-            
-        </div>
-        
-        <div class="product mrglft">
-
-            <img src="IMG_20260728_104619_447.jpg">
-
-            <div class="info">
-
-                <span class="rating">
-                    ⭐ 4.8 · 3000+ заказов
-                </span>    
-                        
-                <h3>
-                 Осенний костюм с длинными рукавами
-                </h3>
-            
-                <div class="price">Заказать на AliExpress</div>        
-
+    
+    
+            <div class="product">
+    
+                <img src="images/product_2.jpg">
+    
+                <div class="info">
+    
+                    <span class="rating">
+                        ⭐ 4.8 · 3000+ заказов
+                    </span>
+    
+                    <h3>
+                        Осенний костюм с длинными рукавами
+                    </h3>
+    
+                    <a href="https://t.me/nahodki_s_ali/617" class="txt-link">
+                        Посмотреть в Telegram
+                    </a>
+    
+                </div>
+    
             </div>
-
+    
+    
+            <!-- Можно добавлять сколько угодно -->
+    
+            <div class="product">
+    
+                <img src="images/product_3.jpg">
+    
+                <div class="info">
+    
+                    <span class="rating">
+                        ⭐ 4.8 · 500+ заказов
+                    </span>
+    
+                    <h3>
+                        Вязаное ажурное платье на шнуровке
+                    </h3>
+    
+                    <a href="https://t.me/nahodki_s_ali/622" class="txt-link">
+                        Посмотреть в Telegram
+                    </a>
+    
+                </div>
+    
+            </div>
+    
         </div>
+    
+        <!-- Стрелки находятся вне карточек -->
+    
+        <button class="slider-arrow prev" aria-label="Предыдущий товар">
+            ‹
+        </button>
+    
+        <button class="slider-arrow next" aria-label="Следующий товар">
+            ›
+        </button>
     
     </div>
 
