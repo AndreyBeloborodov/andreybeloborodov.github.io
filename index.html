@@ -83,7 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    let currentSlide = 0;
+    let currentSlide = 1;
+
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.has('pw_id')) {
+        const id = params.get('pw_id');
+        currentSlide = Number(id)
+    }
 
     function updateSlider() {
 
@@ -166,13 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
         по отзывам, популярности, цене и качеству.
     </p>
 
-    <a href="https://t.me/nahodki_s_ali/410" class="button">
+    <a href="https://t.me/nahodki_s_ali" class="button">
         Открыть Telegram
     </a>
-
-    <div class="vpn-tip">
-        💡 Не забудьте включить VPN
-    </div>
     
 </section>
 
@@ -216,28 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
         <div class="div-products">
     
-            <div class="product">
-    
-                <img src="images/product_1.jpg">
-    
-                <div class="info">
-    
-                    <span class="rating">
-                        ⭐ 4.7 · 4000+ заказов
-                    </span>
-    
-                    <h3>
-                        Хлопковое платье с открытой спиной
-                    </h3>
-    
-                    <a href="https://t.me/nahodki_s_ali/635" class="txt-link">
-                        💙 Посмотреть в Telegram
-                    </a>
-    
-                </div>
-    
-            </div>
-    
     
             <div class="product">
     
@@ -260,9 +241,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
     
             </div>
+
+            <div class="product">
     
+                <img src="images/product_1.jpg">
     
-            <!-- Можно добавлять сколько угодно -->
+                <div class="info">
+    
+                    <span class="rating">
+                        ⭐ 4.7 · 4000+ заказов
+                    </span>
+    
+                    <h3>
+                        Хлопковое платье с открытой спиной
+                    </h3>
+    
+                    <a href="https://t.me/nahodki_s_ali/635" class="txt-link">
+                        💙 Посмотреть в Telegram
+                    </a>
+    
+                </div>
+    
+            </div>
     
             <div class="product">
     
@@ -312,13 +312,9 @@ document.addEventListener('DOMContentLoaded', () => {
         Новые подборки публикуются каждый день
     </p>
 
-    <a href="https://t.me/nahodki_s_ali/410" class="button">
+    <a href="https://t.me/nahodki_s_ali" class="button">
         Перейти в Telegram
     </a>
-    
-    <div class="vpn-tip">
-        💡 Не забудьте включить VPN
-    </div>
 
 </section>
 
